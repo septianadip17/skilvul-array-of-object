@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<body>
+    <table border="1" cellSpacing="0" cellPadding="5">
+        <thead>
+            <th>Brand</th>
+            <th>Type</th>
+            <th>Year</th>
+            <th>Color</th>
+        </thead>
+        <tbody id="my-body-table"></tbody>
+    </table>
+</body>
+
+<script>
+    const cars = [{
+            brand: "Citroen",
+            type: "Second",
+            year: "2000",
+            color: "White"
+        },
+        {
+            brand: "Peugeot",
+            type: "New",
+            year: "2012",
+            color: "Red"
+        },
+        {
+            brand: "Tesla",
+            type: "New",
+            year: "2020",
+            color: "Silver"
+        },
+    ];
+
+    const table = document.getElementById("my-body-table")
+    cars.forEach((data, index) => {
+        const row = table.insertRow(index)
+        row.insertCell(0).innerHTML = data.brand
+        row.insertCell(1).innerHTML = data.type
+        row.insertCell(2).innerHTML = data.year
+        row.insertCell(3).innerHTML = data.color
+    })
+</script>
+
+</html>
